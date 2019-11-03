@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  background-color: $color-white;
+  color: $color-black;
+  font-family: "VialogL", sans-serif;
+}  
+
+body {
+  @include bp(x) {
+  }
+  @include bp(s) {
+  }
+  @include bp(m) {
+  }
+}
+

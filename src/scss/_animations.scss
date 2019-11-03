@@ -1,0 +1,117 @@
+.animateWidth {
+  transition: all $ani-speed ease;
+  transform: translateZ(0);
+}
+
+.animateTooltip {
+  transition: all $ani-speed ease;
+  transform: translateZ(0);
+}
+
+.animateOpacity {
+  transition: opacity $ani-speed ease;
+  transform: translateZ(0);
+}
+
+.animateAll {
+  backface-visibility: hidden;
+  transition: all $ani-speed ease;
+  transform: translateZ(0);
+}
+
+.animateFill {
+  transition: fill $ani-speed ease;
+  transform: translateZ(0);
+}
+
+.animateBackground {
+  transition: "background-color" $ani-speed ease;
+  transform: translateZ(0);
+}
+
+
+
+.fade-enter-active, .fade-leave-active {
+  backface-visibility: hidden;
+  transition: all $ani-speed ease;
+  transform: translateZ(0);
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateZ(0);
+}
+
+.fade-fast-enter-active, .fade-fast-leave-active {
+  transition: opacity $ani-speed/2 ease;
+  transform: translateZ(0);
+}
+.fade-fast-enter, .fade-fast-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateZ(0);
+}
+
+
+.fade-out-in-enter-active, .fade-out-in-leave-active {
+  transition: opacity $ani-speed/2;
+  left: 0;
+}
+.fade-out-in-enter, .fade-out-in-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+
+
+.slideIn-enter-active, .slideIn-leave-active {
+  backface-visibility: hidden;
+  transition: all $ani-speed ease;
+  transform: translateZ(0);
+  // $ani-speed
+
+}
+
+.slideIn-enter, .slideIn-leave-to {
+  transform: translateY(100%);
+  opacity: .5;
+}
+
+.slideIn-enter-to, .slideIn-leave {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+
+
+.downUpIn-enter-active, .downUpIn-leave-active {
+  backface-visibility: hidden;
+  transition: all $ani-speed ease;
+  transform: translateZ(0);
+}
+
+.downUpIn-enter, .downUpIn-leave-to {
+  // transform: translateX(-20%) translateY(-20%);
+  transform: translateY(0);
+  opacity: 0;
+}
+
+.downUpIn-enter-to, .downUpIn-leave {
+  transform: translateY(0);
+  scale: 10;
+  opacity: 1;
+}
+
+
+
+
+.fadeSlow-enter-active, .fadeSlow-leave-active {
+  backface-visibility: hidden;
+  transition: all $ani-speed*2 ease;
+  transform: translateZ(0);
+}
+
+.fadeSlow-enter, .fadeSlow-leave-to {
+  opacity: 0;
+}
+
+.fadeSlow-enter-to, .fadeSlow-leave {
+  opacity: 1;
+}
