@@ -1,17 +1,49 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+
+    <Navigation :items="navItems"></Navigation>
+
+    <transition>
+      <routerView></routerView>
+    </transition>
+
+    <Loading :isLoading="isLoading" />
+
   </div>
 </template>
 
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+import Navigation from '@/components/Navigation'
+import Loading from '@/components/Loading'
 
 export default {
   name: 'app',
   components: {
-    // HelloWorld
+    Navigation,
+    Loading,
+  },
+  created () {
+    console.log('# App created');
+
+  },
+  mounted() {
+    console.log(process.env);
+  },
+  data() {
+    return {
+      isLoading: this.$store.state.isLoading,
+      navItems: [
+        {
+          name: 'home',
+          path: '/'
+        },
+        {
+          name: 'foo',
+          path: '/foo'
+        },
+      ],
+    }
   }
 }
 </script>
